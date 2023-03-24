@@ -1,0 +1,45 @@
+﻿<metro:MetroWindow x:Class="StructureBuilder.Views.AsymmetricMarginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StructureBuilder.Views"
+        mc:Ignorable="d"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="Set Asymmetric Margin" Height="450" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="Margin Type" FontWeight="Bold" Margin="5"/>
+            <TextBlock Text="[mm]" HorizontalAlignment="Center" FontWeight="Bold" Margin="2"/>
+        </StackPanel>
+        <ComboBox ItemsSource="{Binding MarginTypes}" SelectedItem="{Binding SelectedMarginType}" Margin="5" Grid.Column="1"/>
+        <TextBlock Text="Ant:" FontWeight="Bold" Margin="5" Grid.Row="1"/>
+        <TextBox Text="{Binding AnteriorMargin}" Grid.Column="1" Margin="5" Grid.Row="1"/>
+        <TextBlock Text="Post:" FontWeight="Bold" Margin="5" Grid.Row="2"/>
+        <TextBox Text="{Binding PosteriorMargin}" Grid.Column="1" Margin="5" Grid.Row="2"/>
+        <TextBlock Text="Left:" FontWeight="Bold" Margin="5" Grid.Row="3"/>
+        <TextBox Text="{Binding LeftMargin}" Grid.Column="1" Margin="5" Grid.Row="3"/>
+        <TextBlock Text="Right:" FontWeight="Bold" Margin="5" Grid.Row="4"/>
+        <TextBox Text="{Binding RightMargin}" Grid.Column="1" Margin="5" Grid.Row="4"/>
+        <TextBlock Text="Sup:" FontWeight="Bold" Margin="5" Grid.Row="5"/>
+        <TextBox Text="{Binding SuperiorMargin}" Grid.Column="1" Margin="5" Grid.Row="5"/>
+        <TextBlock Text="Inf:" FontWeight="Bold" Margin="5" Grid.Row="6"/>
+        <TextBox Text="{Binding InferiorMargin}" Grid.Column="1" Margin="5" Grid.Row="6"/>
+        <Button Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="5"
+                Width="120" Content="Save Margins" Background="CadetBlue" Command="{Binding SaveAsymmetricMarginCommand}"/>
+    </Grid>
+</metro:MetroWindow>

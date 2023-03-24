@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="StructureBuilder.Views.StructureStepView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StructureBuilder.Views"
+             xmlns:converters="clr-namespace:StructureBuilder.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converters:MarginVisibilityConverter x:Key="localMarginVisibiltyConverter"/>
+            <converters:TargetStructureVisibilityConverter x:Key="localTargetVisiblityConverter"/>
+            <converters:AsymmetricMarginVisibilityConverter x:Key="localAsymmetricMarginVisibilityConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="Result" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBox Text="{Binding ResultStructure}" Margin="2"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="BaseStructure" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding Structures}" SelectedItem="{Binding SelectedBaseStructure}" Margin="2"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="Operation" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding Operations}" SelectedItem="{Binding SelectedOperation}" Margin="2"/>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <TextBlock Text="Target Structure" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"
+                       Visibility="{Binding SelectedOperation, Converter={StaticResource localTargetVisiblityConverter}}"/>
+            <ComboBox ItemsSource="{Binding Structures}" SelectedItem="{Binding SelectedTargetStructure}" Margin="2"
+                      Visibility="{Binding SelectedOperation, Converter={StaticResource localTargetVisiblityConverter}}"/>
+            <TextBlock Text="Margin [mm]" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"
+                       Visibility="{Binding SelectedOperation, Converter={StaticResource localMarginVisibiltyConverter}}"/>
+            <TextBox Text="{Binding Margin}" Margin="2"
+                     Visibility="{Binding SelectedOperation, Converter={StaticResource localMarginVisibiltyConverter}}"/>
+            <Button Content="Set Margin" Margin="2,20,2,2" Background="CadetBlue" Command="{Binding SetAsymmetricMarginCommand}"
+                    Visibility="{Binding SelectedOperation, Converter={StaticResource localAsymmetricMarginVisibilityConverter}}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="4">
+            <TextBlock Text="Temp" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <CheckBox IsChecked="{Binding bTemp}" HorizontalAlignment="Center" Margin="2"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

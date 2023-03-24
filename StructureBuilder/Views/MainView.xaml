@@ -1,0 +1,54 @@
+﻿<metro:MetroWindow x:Class="StructureBuilder.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StructureBuilder.Views"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                   xmlns:converters="clr-namespace:StructureBuilder.Converters"
+        mc:Ignorable="d"
+        Title="MainView" Height="450" Width="800">
+    <metro:MetroWindow.Resources>
+        <ResourceDictionary>
+            <converters:BoolReverseVisibilityConverter x:Key="localBoolReverseVisibilityConverter"/>
+        </ResourceDictionary>
+    </metro:MetroWindow.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Command="{Binding ImportTemplateCommand}" Width="50" ToolTip="Import from Template">
+                <icons:FontAwesome Kind="FileImportSolid"/>
+            </Button>
+            <Button Command="{Binding ExportTemplateCommand}" Width="50" Grid.Column="1" ToolTip="Export from Template">
+                <icons:FontAwesome Kind="FileExportSolid"/>
+            </Button>
+            <Button Command="{Binding AddStepCommand}" Width="50" Grid.Column="2" ToolTip="Add Structure Creation Step">
+                <icons:FontAwesome Kind="PlusSquareSolid"/>
+            </Button>
+            <Button Command="{Binding RunStepsCommand}" Width="50" Grid.Column="3" ToolTip="Run All Structure Creation Steps">
+                <icons:FontAwesome Kind="RunningSolid"/>
+            </Button>
+            
+        </Grid>
+        <ItemsControl ItemsSource="{Binding StructureCreationSteps}" Grid.Row="1">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:StructureStepView DataContext="{Binding}"></local:StructureStepView>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" Foreground="Red" Text="Not Valid for Clinical Use"
+                   Visibility="{Binding bValidForClinic, Converter={StaticResource localBoolReverseVisibilityConverter}}"/>
+    </Grid>
+</metro:MetroWindow>
