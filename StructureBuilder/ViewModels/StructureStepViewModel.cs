@@ -116,7 +116,7 @@ namespace StructureBuilder.ViewModels
 
         private void InitializeCollections()
         {
-            foreach(var structure in _structureSet.Structures)
+            foreach(var structure in _structureSet.Structures.OrderByDescending(st=>st.DicomType.Contains("TV")).ThenBy(st=>st.Id))
             {
                 Structures.Add(structure.Id);
             }

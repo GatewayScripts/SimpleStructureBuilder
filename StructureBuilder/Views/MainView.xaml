@@ -8,7 +8,7 @@
                    xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
                    xmlns:converters="clr-namespace:StructureBuilder.Converters"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="800">
+        Title="Structure Builder" Height="450" Width="800">
     <metro:MetroWindow.Resources>
         <ResourceDictionary>
             <converters:BoolReverseVisibilityConverter x:Key="localBoolReverseVisibilityConverter"/>

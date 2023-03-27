@@ -65,6 +65,28 @@ namespace StructureBuilder.ViewModels
                 System.Windows.MessageBox.Show($"The following structures cannot be overriden:\n\t{String.Join("\n\t", invalidStructures)}");
                 return;
             }
+            //check for missing inputs
+            //List<string> emptyBaseStructures = new List<string>();
+            //List<string> emptyTargetStructures = new List<string>();
+            
+            foreach(var step in StructureCreationSteps)
+            {
+                if (String.IsNullOrEmpty(step.SelectedBaseStructure))
+                {
+                    //emptyBaseStructures.Add(step.SelectedBaseStructure);
+                    valid = false;
+                }
+                if (String.IsNullOrEmpty(step.SelectedTargetStructure) && !step.SelectedOperation.Contains("Margin"))
+                {
+                    //emptyTargetStructures.Add(step.SelectedTargetStructure);
+                    valid = false;
+                }
+            }
+            if(!valid)
+            {
+                System.Windows.MessageBox.Show($"Some base structures or target structures are missing.");
+                return;
+            }
             //build structure with ESAPI
             foreach (var step in StructureCreationSteps)
             {
@@ -140,6 +162,7 @@ namespace StructureBuilder.ViewModels
             var creationStep = new StructureStepViewModel(_structureSet,StructureCreationSteps.Count(),_eventAggregator);
             if (priorSteps.Any())
             {
+                //add all structures to the structures collections. 
                 foreach (var step in priorSteps)
                 {
                     creationStep.Structures.Add(step);
@@ -189,8 +212,12 @@ namespace StructureBuilder.ViewModels
                     var scStep = StructureCreationSteps.Last();
                     scStep.bTemp = scm.bTemp;
                     scStep.ResultStructure = scm.ResultStructure;
-                    scStep.SelectedBaseStructure = scm.BaseStructure;
-                    scStep.SelectedTargetStructure = scm.TargetStructure;
+                    scStep.SelectedBaseStructure =
+                       scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
+                        scm.BaseStructure : null;
+                    scStep.SelectedTargetStructure = 
+                        scStep.Structures.Any(st=>st.Equals(scm.BaseStructure,StringComparison.OrdinalIgnoreCase)) ?
+                        scm.TargetStructure: null;
                     scStep.Margin = scm.Margin;
                     scStep.SelectedOperation = scm.StructureOperation;
                     scStep.AsymmetricMargins = scm.AsymmetricMargin;

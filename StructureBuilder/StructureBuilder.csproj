@@ -114,6 +114,7 @@
     <Compile Include="Converters\TargetStructureVisibilityConverter.cs" />
     <Compile Include="Events\SetAsymmetricMarginEvent.cs" />
     <Compile Include="Models\AsymmetricMarginModel.cs" />
+    <Compile Include="Resources\StructureBuilderLauncher.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
     <EmbeddedResource Include="Startup\StructureBuilderLauncher.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -175,6 +176,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Image1.JPG" />
+    <Resource Include="Resources\Images\Image2.JPG" />
+    <Resource Include="Resources\Images\Image3.JPG" />
+    <Resource Include="Resources\Images\Image4.JPG" />
+    <Resource Include="Resources\Images\Image5.JPG" />
+    <Resource Include="Resources\Images\Image6.JPG" />
+    <Resource Include="Resources\Images\Image7.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
