@@ -117,7 +117,9 @@
     <Compile Include="Converters\TargetStructureVisibilityConverter.cs" />
     <Compile Include="Events\SetAsymmetricMarginEvent.cs" />
     <Compile Include="Models\AsymmetricMarginModel.cs" />
-    <Compile Include="Resources\StructureBuilderLauncher.cs" />
+    <EmbeddedResource Include="Resources\StructureBuilderLauncher.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Compile Include="Startup\Bootstrapper.cs" />
     <Compile Include="ViewModels\AsymmetricMarginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -189,6 +191,17 @@
     <Resource Include="Resources\Images\Image5.JPG" />
     <Resource Include="Resources\Images\Image6.JPG" />
     <Resource Include="Resources\Images\Image7.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\dl1.PNG" />
+    <Resource Include="Resources\Images\dl2.PNG" />
+    <Resource Include="Resources\Images\dl3.PNG" />
+    <Resource Include="Resources\Images\dl4.PNG" />
+    <Resource Include="Resources\Images\dl5.PNG" />
+    <Resource Include="Resources\Images\dl6.PNG" />
+    <Resource Include="Resources\Images\dl7.PNG" />
+    <Resource Include="Resources\Images\dl8.PNG" />
+    <Resource Include="Resources\Images\dl9.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
