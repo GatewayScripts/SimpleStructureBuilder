@@ -119,9 +119,6 @@
     <Compile Include="Models\AsymmetricMarginModel.cs" />
     <Compile Include="Resources\StructureBuilderLauncher.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
-    <EmbeddedResource Include="Startup\StructureBuilderLauncher.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <Compile Include="ViewModels\AsymmetricMarginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\StructureStepViewModel.cs" />
