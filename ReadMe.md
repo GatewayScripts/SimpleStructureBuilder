@@ -35,3 +35,29 @@
  <p>In the <b>Debug</b> section of the properties, the patient and structure set information can be injected into the <b>Command line arguments</b>. The order for this argument is "PatientId;ImageId;StructureSetId"</p>
  <img src="/StructureBuilder/Resources/Images/Image7.JPG" alt="Command line arguments"/>
  <h2>Running Structure Builder from Download.</h2>
+ <h3>Download the compiled code</h3>
+<p>To download the code from the Gateway Scripts website, go to <a href="https://www.gatewayscripts.com/code">Gateway Code</a> Click on the download button under the <b> Simple Structure Builder</b></p>
+<img src="/StructureBuilder/Resources/Images/dl1.PNG" alt="Simple Structure Builder"/>
+<p>The download page will ask some question regarding the person downloading the file and request an agreement for the end user.</p>
+<img src="/StructureBuilder/Resources/Images/dl2.PNG" alt="form submission"/>
+<p>After submission of the form, the link will appear for downloading the zip file with the compiled code.</p>
+<img src="/StructureBuilder/Resources/Images/dl3.PNG" alt="download link"/>
+<p><i>Note: When downloading the zip file, the user may need to go to the zip file properties, and unblock the files prior to extraction</i></p>
+<img src="/StructureBuilder/Resources/Images/dl4.PNG" alt="Unblock zip"/>
+<h3>Extract the files</h3>
+<p>Right mouse click and extract the files. In the image example below, the compiled code files are being stored in a subfolder of the <b>Published Scripts</b> folder. This will make the code most easily accessible.
+<img src="/StructureBuilder/Resources/Images/dl5.PNG" alt="Extraction"/>
+<p>Once the code extraction is completed, enter the <b>Resources</b> folder. Copy the file <b>StructureBuilderLauncher.cs</b> and paste the file into the PublishedScripts folder. This step is to make the script more visible from Eclipse</p>
+<img src="/StructureBuilder/Resources/Images/dl6.PNG" alt="Copy Launcher"/>
+<p>Update the <i>AppExePath</i> to path of the executable file using the following steps:
+<ol>
+<li>Open the file <b>StructureBuilderLauncher.cs</b> </li>
+<li>Enter the folder where the compiled code was extracted. Hold down the shift key, and right moust click the file <b>StructureBuilder.exe</b>. Select the option <i>Copy as Path</i></li>
+<li>Paste the exe path into the StructureBuilderLauncher file at the location where it states <i>put exe path here</i>. Note: the copied path contains the double quote symbols (""). Please be sure to paste over the existing quotes (i.e. there should only be one double-quote symbol on either side of the exe path</li>
+</ol>
+<img src="/StructureBuilder/Resources/Images/dl7.PNG" alt="Copy EXE Path"/>
+<h3>Run the script</h3>
+<p>Open Eclipse/External Beam Planning. Make sure to open a patient and structure set as these are input arguments to the applicaiton</p>
+<img src="/StructureBuilder/Resources/Images/dl8.PNG" alt="Launch Script"/>
+<p>Welcome to the Structure Builder</p>
+<img src="/StructureBuilder/Resources/Images/dl9.PNG" alt="Structure Builder"/>
