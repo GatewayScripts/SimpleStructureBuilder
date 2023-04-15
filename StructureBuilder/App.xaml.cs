@@ -34,6 +34,7 @@ namespace StructureBuilder
                     var bootstrapper = new Bootstrapper();
                     var container = bootstrapper.Boostrap(structureSet,app);
                     var MV = container.Resolve<MainView>();
+                    MV._app = app;
                     MV.DataContext = container.Resolve<MainViewModel>();
                     MV.ShowDialog();
                 }
