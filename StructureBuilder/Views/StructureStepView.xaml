@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StructureBuilder.Views"
              xmlns:converters="clr-namespace:StructureBuilder.Converters"
+             xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
@@ -20,6 +21,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
@@ -49,6 +51,13 @@
         <StackPanel Grid.Column="4">
             <TextBlock Text="Temp" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
             <CheckBox IsChecked="{Binding bTemp}" HorizontalAlignment="Center" Margin="2"/>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="5">
+            <TextBlock Text="Details" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <Button Width="40" Height="40" Command="{Binding StructureConfigurationCommand}" ToolTip="Configure Structure Details">
+                <icons:FontAwesome Kind="EditRegular"/>
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>

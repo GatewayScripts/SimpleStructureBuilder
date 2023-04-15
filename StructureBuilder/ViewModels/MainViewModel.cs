@@ -13,7 +13,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using VMS.TPS.Common.Model.API;
+using VMS.TPS.Common.Model.Types;
 
 namespace StructureBuilder.ViewModels
 {
@@ -101,11 +103,28 @@ namespace StructureBuilder.ViewModels
                 }
                 else
                 {
-                    newStructure = _structureSet.AddStructure("CONTROL", step.ResultStructure);
+                    if (step.StructureCode != null)
+                    {
+                        newStructure = _structureSet.AddStructure(new StructureCodeInfo(step.StructureCode.CodingScheme, step.StructureCode.Code));
+                        newStructure.Id = step.ResultStructure;
+                    }
+                    else
+                    {
+                        newStructure = _structureSet.AddStructure("CONTROL", step.ResultStructure);
+                    }
+                    if (!String.IsNullOrEmpty(step.StructureColor))
+                    {
+                        newStructure.Color = (Color)ColorConverter.ConvertFromString(step.StructureColor);
+                    }
                 }
                 //comment about auto generated structure.
                 newStructure.Comment = $"Auto Generated Structure {Assembly.GetExecutingAssembly().GetName()}";
                 var baseStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedBaseStructure));
+                //if base structure is high resolution make the new structure high resolution.
+                if (baseStructure.IsHighResolution)
+                {
+                    newStructure.ConvertToHighResolution();
+                }
                 if (step.SelectedOperation == "Margin")
                 {
                     //symmetric margins only supported.
@@ -127,6 +146,10 @@ namespace StructureBuilder.ViewModels
                 {
                     //Other steps require the operation and a target structure.
                     var targetStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedTargetStructure));
+                    if (targetStructure.IsHighResolution && !newStructure.IsHighResolution)
+                    {
+                        newStructure.ConvertToHighResolution();
+                    }
                     if (step.SelectedOperation == "And")
                     {
                         newStructure.SegmentVolume = baseStructure.SegmentVolume.And(targetStructure);
@@ -178,6 +201,7 @@ namespace StructureBuilder.ViewModels
             foreach (var step in StructureCreationSteps)
             {
                 StructureCreationModel scModel = new StructureCreationModel();
+                scModel.StructureStepId = step.StepId;
                 scModel.ResultStructure = step.ResultStructure;
                 scModel.BaseStructure = step.SelectedBaseStructure;
                 scModel.StructureOperation = step.SelectedOperation;
@@ -185,6 +209,8 @@ namespace StructureBuilder.ViewModels
                 scModel.Margin = step.Margin;
                 scModel.bTemp = step.bTemp;
                 scModel.AsymmetricMargin = step.AsymmetricMargins;
+                scModel.ResultStructureColor = step.StructureColor;
+                scModel.ResultStructureCode = step.StructureCode;
                 scmList.Add(scModel);
             }
             SaveFileDialog sfd = new SaveFileDialog();
@@ -203,6 +229,7 @@ namespace StructureBuilder.ViewModels
             ofd.Title = "Open Structure Template";
             if (ofd.ShowDialog() == true)
             {
+                StructureCreationSteps.Clear();
                 //get list from template
                 //TODO error checking onJson conversion.
                 List<StructureCreationModel> scmList = JsonConvert.DeserializeObject<List<StructureCreationModel>>(File.ReadAllText(ofd.FileName));
@@ -221,6 +248,8 @@ namespace StructureBuilder.ViewModels
                     scStep.Margin = scm.Margin;
                     scStep.SelectedOperation = scm.StructureOperation;
                     scStep.AsymmetricMargins = scm.AsymmetricMargin;
+                    scStep.StructureCode = scm.ResultStructureCode;
+                    scStep.StructureColor = scm.ResultStructureColor;
                 }
             }
         }

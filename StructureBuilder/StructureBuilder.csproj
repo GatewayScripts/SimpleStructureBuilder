@@ -114,21 +114,29 @@
     <Compile Include="Converters\AsymmetricMarginVisibilityConverter.cs" />
     <Compile Include="Converters\BoolReverseVisibilityConverter.cs" />
     <Compile Include="Converters\MarginVisibilityConverter.cs" />
+    <Compile Include="Converters\StringColorConverter.cs" />
     <Compile Include="Converters\TargetStructureVisibilityConverter.cs" />
     <Compile Include="Events\SetAsymmetricMarginEvent.cs" />
+    <Compile Include="Events\UpdateStructureDetailEvent.cs" />
     <Compile Include="Models\AsymmetricMarginModel.cs" />
     <EmbeddedResource Include="Resources\StructureBuilderLauncher.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Compile Include="Models\StructureCodeModel.cs" />
+    <Compile Include="Services\StructureCodeService.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
     <Compile Include="ViewModels\AsymmetricMarginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\StructureConfigurationViewModel.cs" />
     <Compile Include="ViewModels\StructureStepViewModel.cs" />
     <Compile Include="Views\AsymmetricMarginView.xaml.cs">
       <DependentUpon>AsymmetricMarginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructureConfigurationView.xaml.cs">
+      <DependentUpon>StructureConfigurationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StructureStepView.xaml.cs">
       <DependentUpon>StructureStepView.xaml</DependentUpon>
@@ -178,6 +186,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\StructureConfigurationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\StructureStepView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -202,6 +214,11 @@
     <Resource Include="Resources\Images\dl7.PNG" />
     <Resource Include="Resources\Images\dl8.PNG" />
     <Resource Include="Resources\Images\dl9.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AppImage8.JPG" />
+    <Resource Include="Resources\Images\AppImage_ColorSelection.JPG" />
+    <Resource Include="Resources\Images\AppImage_DetailsIcon.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

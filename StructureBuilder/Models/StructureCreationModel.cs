@@ -1,15 +1,9 @@
-﻿using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace StructureBuilder.Models
 {
-    public class StructureCreationModel:BindableBase
+    public class StructureCreationModel
     {
-
+        public int StructureStepId { get; set; }
         public string ResultStructure { get; set; }
         public string StructureOperation { get; set; }
         public string BaseStructure { get; set; }
@@ -17,6 +11,8 @@ namespace StructureBuilder.Models
         public bool bTemp { get; set; }
         public double Margin { get; set; }
         public AsymmetricMarginModel AsymmetricMargin { get; set; }
+        public string ResultStructureColor { get; set; }
+        public StructureCodeModel ResultStructureCode { get; set; }
         //List<string> AdditionalStructures { get; set; }
     }
 }

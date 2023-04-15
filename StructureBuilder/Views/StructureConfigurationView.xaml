@@ -1,0 +1,38 @@
+﻿<metro:MetroWindow x:Class="StructureBuilder.Views.StructureConfigurationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StructureBuilder.Views"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:converters="clr-namespace:StructureBuilder.Converters"
+        mc:Ignorable="d"
+        Title="Structure Details" Height="250" Width="200">
+    <metro:MetroWindow.Resources>
+        <ResourceDictionary>
+            <converters:StringColorConverter x:Key="localStringColorConverter"/>
+        </ResourceDictionary>
+    </metro:MetroWindow.Resources>
+    <Grid>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top">
+                <TextBlock FontWeight="Bold" Text="Structure Id" Margin="10,2,2,2"/>
+                <TextBlock Text="{Binding StructureId}" Margin="10,2,10,2" Background="DarkGray"/>
+                <TextBlock FontWeight="Bold" Text="Color" Margin="10,2,2,2"/>
+                <ComboBox Width="150" Margin="10,2,2,2" ItemsSource="{Binding StructureColors}" SelectedItem="{Binding SelectedStructureColor}" HorizontalAlignment="Left">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding {}}" Background="{Binding {}, Converter={StaticResource localStringColorConverter}}" FontWeight="Bold" HorizontalAlignment="Stretch"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBlock FontWeight="Bold" Text="Code" Margin="10,2,2,2"/>
+                <ComboBox Width="150" Margin="10,2,2,2" ItemsSource="{Binding StructureCodes}" SelectedItem="{Binding SelectedStructureCode}" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <Button HorizontalAlignment="Center" Margin="10" Command="{Binding SaveCommand}" Width="200" DockPanel.Dock="Bottom" Height="30">
+                <icons:FontAwesome Kind="SaveSolid"/>
+            </Button>
+        </DockPanel>
+    </Grid>
+</metro:MetroWindow>
