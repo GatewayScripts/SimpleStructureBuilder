@@ -50,7 +50,7 @@ namespace StructureBuilder.ViewModels
             bool valid = true;
             List<string> invalidStructures = new List<string>();
             var exclusions = ConfigurationManager.AppSettings["ExclusionTypes"].Split(';');
-            foreach(var step in StructureCreationSteps)
+            foreach (var step in StructureCreationSteps)
             {
                 if (_structureSet.Structures.Any(st => st.Id.Equals(step.ResultStructure, StringComparison.OrdinalIgnoreCase)))
                 {
@@ -70,8 +70,8 @@ namespace StructureBuilder.ViewModels
             //check for missing inputs
             //List<string> emptyBaseStructures = new List<string>();
             //List<string> emptyTargetStructures = new List<string>();
-            
-            foreach(var step in StructureCreationSteps)
+
+            foreach (var step in StructureCreationSteps)
             {
                 if (String.IsNullOrEmpty(step.SelectedBaseStructure))
                 {
@@ -84,21 +84,25 @@ namespace StructureBuilder.ViewModels
                     valid = false;
                 }
             }
-            if(!valid)
+            if (!valid)
             {
                 System.Windows.MessageBox.Show($"Some base structures or target structures are missing.");
                 return;
             }
+
+
             //build structure with ESAPI
             foreach (var step in StructureCreationSteps)
             {
+                var baseStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedBaseStructure));
+
                 Structure newStructure = null;
                 //first check if structure exists, if so modify, if no, create.
                 if (_structureSet.Structures.Any(s => s.Id.Equals(step.ResultStructure, StringComparison.OrdinalIgnoreCase)))
                 {
                     //check that the existing structure isn't an exclusion structure type.
                     var currentStructure = _structureSet.Structures.First(st => st.Id.Equals(step.ResultStructure, StringComparison.OrdinalIgnoreCase));
-                   
+
                     newStructure = _structureSet.Structures.First(s => s.Id.Equals(step.ResultStructure, StringComparison.OrdinalIgnoreCase));
                 }
                 else
@@ -119,7 +123,6 @@ namespace StructureBuilder.ViewModels
                 }
                 //comment about auto generated structure.
                 newStructure.Comment = $"Auto Generated Structure {Assembly.GetExecutingAssembly().GetName()}";
-                var baseStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedBaseStructure));
                 //if base structure is high resolution make the new structure high resolution.
                 if (baseStructure.IsHighResolution)
                 {
@@ -130,7 +133,7 @@ namespace StructureBuilder.ViewModels
                     //symmetric margins only supported.
                     newStructure.SegmentVolume = baseStructure.SegmentVolume.Margin(step.Margin);
                 }
-                else if(step.SelectedOperation == "Asymmetric Margin")
+                else if (step.SelectedOperation == "Asymmetric Margin")
                 {
                     newStructure.SegmentVolume = baseStructure.SegmentVolume.AsymmetricMargin(
                         new VMS.TPS.Common.Model.Types.AxisAlignedMargins(
@@ -144,11 +147,21 @@ namespace StructureBuilder.ViewModels
                 }
                 else
                 {
-                    //Other steps require the operation and a target structure.
                     var targetStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedTargetStructure));
+                    //check that target structure and base structure are the same resolution.
+                    if ((targetStructure.IsHighResolution && !baseStructure.IsHighResolution) || (!targetStructure.IsHighResolution && baseStructure.IsHighResolution))
+                    {
+                        System.Windows.MessageBox.Show($"Base Structure ({baseStructure.Id} - {(baseStructure.IsHighResolution ? "High Res" : "Standard Res")}) and Target Structure ({targetStructure.Id} - {(targetStructure.IsHighResolution ? "High Res" : "Standard Res")}) are not the same resolution.\nPlease close the app and update the structures.");
+                        return;
+                    }
+                    //Other steps require the operation and a target structure.
                     if (targetStructure.IsHighResolution && !newStructure.IsHighResolution)
                     {
                         newStructure.ConvertToHighResolution();
+                    }
+                    if (newStructure.IsHighResolution && !targetStructure.IsHighResolution && targetStructure.DicomType != "EXTERNAL")
+                    {
+                        targetStructure.ConvertToHighResolution();
                     }
                     if (step.SelectedOperation == "And")
                     {
@@ -182,7 +195,7 @@ namespace StructureBuilder.ViewModels
         private void OnAddStep()
         {
             List<string> priorSteps = StructureCreationSteps.Select(scs => scs.ResultStructure).ToList();
-            var creationStep = new StructureStepViewModel(_structureSet,StructureCreationSteps.Count(),_eventAggregator);
+            var creationStep = new StructureStepViewModel(_structureSet, StructureCreationSteps.Count(), _eventAggregator);
             if (priorSteps.Any())
             {
                 //add all structures to the structures collections. 
@@ -233,7 +246,7 @@ namespace StructureBuilder.ViewModels
                 //get list from template
                 //TODO error checking onJson conversion.
                 List<StructureCreationModel> scmList = JsonConvert.DeserializeObject<List<StructureCreationModel>>(File.ReadAllText(ofd.FileName));
-                foreach(var scm in scmList)
+                foreach (var scm in scmList)
                 {
                     OnAddStep();//add the step manually, then fill the data from JSON. 
                     var scStep = StructureCreationSteps.Last();
@@ -242,9 +255,9 @@ namespace StructureBuilder.ViewModels
                     scStep.SelectedBaseStructure =
                        scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
                         scm.BaseStructure : null;
-                    scStep.SelectedTargetStructure = 
-                        scStep.Structures.Any(st=>st.Equals(scm.BaseStructure,StringComparison.OrdinalIgnoreCase)) ?
-                        scm.TargetStructure: null;
+                    scStep.SelectedTargetStructure =
+                        scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
+                        scm.TargetStructure : null;
                     scStep.Margin = scm.Margin;
                     scStep.SelectedOperation = scm.StructureOperation;
                     scStep.AsymmetricMargins = scm.AsymmetricMargin;
