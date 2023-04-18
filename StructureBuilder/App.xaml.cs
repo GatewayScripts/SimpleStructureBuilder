@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using StructureBuilder.Services;
 using StructureBuilder.Startup;
 using StructureBuilder.ViewModels;
 using StructureBuilder.Views;
@@ -31,6 +32,8 @@ namespace StructureBuilder
                     Patient patient = app.OpenPatientById(_patientId);
                     patient.BeginModifications();
                     StructureSet structureSet = patient.StructureSets.FirstOrDefault(ss => ss.Id == _structureSetId && ss.Image.Id == _imageId);
+                    //read structure codes and store them in the code service.
+                    StructureCodeService.GetStructureCodes();
                     var bootstrapper = new Bootstrapper();
                     var container = bootstrapper.Boostrap(structureSet,app);
                     var MV = container.Resolve<MainView>();

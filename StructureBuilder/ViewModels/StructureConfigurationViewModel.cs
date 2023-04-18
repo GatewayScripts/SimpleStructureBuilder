@@ -3,6 +3,7 @@ using Prism.Events;
 using Prism.Mvvm;
 using StructureBuilder.Events;
 using StructureBuilder.Models;
+using StructureBuilder.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,6 +72,14 @@ namespace StructureBuilder.ViewModels
             StructureColors = new List<string>();
             FillColors();
             FillStructures();
+            if (structure.ResultStructureCode!=null)
+            {
+                SelectedStructureCode = structure.ResultStructureCode;
+            }
+            if (!String.IsNullOrEmpty(structure.ResultStructureColor))
+            {
+                SelectedStructureColor = structure.ResultStructureColor;
+            }
             StructureId = structure.ResultStructure;
             _localStructure.StructureStepId = structure.StructureStepId;
             SaveCommand = new DelegateCommand(OnSave);
@@ -78,7 +87,10 @@ namespace StructureBuilder.ViewModels
 
         private void FillStructures()
         {
-            
+            foreach(var code in StructureCodeService.StructureCodes)
+            {
+                StructureCodes.Add(code);
+            }
         }
 
         private void FillColors()

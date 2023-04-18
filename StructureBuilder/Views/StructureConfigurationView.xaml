@@ -28,7 +28,17 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
                 <TextBlock FontWeight="Bold" Text="Code" Margin="10,2,2,2"/>
-                <ComboBox Width="150" Margin="10,2,2,2" ItemsSource="{Binding StructureCodes}" SelectedItem="{Binding SelectedStructureCode}" HorizontalAlignment="Left"/>
+                <ComboBox Width="150" Margin="10,2,2,2" ItemsSource="{Binding StructureCodes}" SelectedItem="{Binding SelectedStructureCode}" HorizontalAlignment="Left">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding Meaning}"/> 
+                                
+                                (<Run Text="{Binding Code}"/>)
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
             </StackPanel>
             <Button HorizontalAlignment="Center" Margin="10" Command="{Binding SaveCommand}" Width="200" DockPanel.Dock="Bottom" Height="30">
                 <icons:FontAwesome Kind="SaveSolid"/>

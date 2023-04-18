@@ -10,6 +10,6 @@ namespace StructureBuilder.Models
     {
         public string Code { get; set; }
         public string Meaning { get; set; }
-        public string CodingScheme { get; set; }
+        public string Scheme { get; set; }
     }
 }

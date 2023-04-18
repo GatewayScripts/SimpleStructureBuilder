@@ -109,7 +109,7 @@ namespace StructureBuilder.ViewModels
                 {
                     if (step.StructureCode != null)
                     {
-                        newStructure = _structureSet.AddStructure(new StructureCodeInfo(step.StructureCode.CodingScheme, step.StructureCode.Code));
+                        newStructure = _structureSet.AddStructure(new StructureCodeInfo(step.StructureCode.Scheme, step.StructureCode.Code));
                         newStructure.Id = step.ResultStructure;
                     }
                     else
