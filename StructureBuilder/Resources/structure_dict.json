@@ -1,1791 +1,1791 @@
 [
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "15630",
 		"Meaning": "Left adrenal gland"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "15629",
 		"Meaning": "Right adrenal gland"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "15703",
 		"Meaning": "Anal canal"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "21930",
 		"Meaning": "External anal sphincter"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "15710",
 		"Meaning": "Internal anal sphincter"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "AnalSphincters",
 		"Meaning": "Set of anal sphincters"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "3734",
 		"Meaning": "Aorta"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "28999",
 		"Meaning": "Applicator"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "11296",
 		"Meaning": "Artifact"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7097",
 		"Meaning": "Left atrium"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7096",
 		"Meaning": "Right atrium"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73247",
 		"Meaning": "Axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73250",
 		"Meaning": "Left axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73253",
 		"Meaning": "Left pectoral axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73252",
 		"Meaning": "Right pectoral axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73263",
 		"Meaning": "Left central axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73262",
 		"Meaning": "Right central axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73265",
 		"Meaning": "Left apical axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73264",
 		"Meaning": "Right apical axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "73249",
 		"Meaning": "Right axillary lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "4838",
 		"Meaning": "Azygos vein"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "5451",
 		"Meaning": "Balloon"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "54645",
 		"Meaning": "Base of tongue"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "15900",
 		"Meaning": "Urinary bladder"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "15902",
 		"Meaning": "Wall of urinary bladder"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "BODY",
 		"Meaning": "Body"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Bolus",
 		"Meaning": "Bolus"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "5453",
 		"Meaning": "Wire"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "5018",
 		"Meaning": "Bone organ"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7199",
 		"Meaning": "Intestine"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7201",
 		"Meaning": "Large intestine"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7200",
 		"Meaning": "Small intestine"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "5906",
 		"Meaning": "Brachial nerve plexus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "45245",
 		"Meaning": "Left brachial nerve plexus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "45244",
 		"Meaning": "Right brachial nerve plexus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "3932",
 		"Meaning": "Brachiocephalic artery"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50801",
 		"Meaning": "Brain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "79876",
 		"Meaning": "Brainstem"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "268893",
 		"Meaning": "Set of breasts"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "26660",
 		"Meaning": "Bronchial tree"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "26662",
 		"Meaning": "Left bronchial tree"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "26661",
 		"Meaning": "Right bronchial tree"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7465",
 		"Meaning": "Carina of trachea"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "3939",
 		"Meaning": "Common carotid artery"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "5576",
 		"Meaning": "Catheter"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "52590",
 		"Meaning": "Cauda equina"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50737",
 		"Meaning": "Celiac artery"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "20462",
 		"Meaning": "Vulva"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "83877",
 		"Meaning": "Left hemisphere of cerebellum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "83876",
 		"Meaning": "Right hemisphere of cerebellum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "62000",
 		"Meaning": "Telencephalon"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "61819",
 		"Meaning": "Left cerebral hemisphere"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "67292",
 		"Meaning": "Right cerebral hemisphere"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "17740",
 		"Meaning": "Cervix of uterus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50060",
 		"Meaning": "Chest wall"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "13323",
 		"Meaning": "Left Clavicle"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "13322",
 		"Meaning": "Right Clavicle"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "60203",
 		"Meaning": "Left cochlea"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "60202",
 		"Meaning": "Right cochlea"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "14543",
 		"Meaning": "Colon"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224269",
 		"Meaning": "Common iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224273",
 		"Meaning": "Left common iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50890",
 		"Meaning": "Right vestibulocochlear nerve"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50891",
 		"Meaning": "Left vestibulocochlear nerve"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Control",
 		"Meaning": "Control Region"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "58240",
 		"Meaning": "Left cornea"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "58239",
 		"Meaning": "Right cornea"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9140",
 		"Meaning": "Thoracic vertebral column"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "16203",
 		"Meaning": "Lumbar vertebral column"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "24138",
 		"Meaning": "Cervical vertebral column"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "13478",
 		"Meaning": "Vertebral column"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "29030",
 		"Meaning": "Dilator"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Dose",
 		"Meaning": "Dose Reference Region"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7206",
 		"Meaning": "Duodenum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "53642",
 		"Meaning": "Left ear"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "53641",
 		"Meaning": "Right ear"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9914",
 		"Meaning": "Vertebra"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7131",
 		"Meaning": "Esophagus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7098",
 		"Meaning": "Right ventricle"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7101",
 		"Meaning": "Left ventricle"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "53644",
 		"Meaning": "Left external ear"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "53643",
 		"Meaning": "Right external ear"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "229177",
 		"Meaning": "External iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "229181",
 		"Meaning": "Left external iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "229179",
 		"Meaning": "Right external iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "12515",
 		"Meaning": "Left eyeball"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "12514",
 		"Meaning": "Right eyeball"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "264089",
 		"Meaning": "Set of eyeballs"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50889",
 		"Meaning": "Left facial nerve"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50888",
 		"Meaning": "Right facial nerve"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "19910",
 		"Meaning": "Left female breast"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "19908",
 		"Meaning": "Right female breast"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "32843",
 		"Meaning": "Proximal epiphysis of left femur"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "32842",
 		"Meaning": "Proximal epiphysis of right femur"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "55012",
 		"Meaning": "Head of left femur"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "55011",
 		"Meaning": "Head of right femur"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "FemoralHeads",
 		"Meaning": "Set of heads of femur"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "35180",
 		"Meaning": "Left hip joint"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "35179",
 		"Meaning": "Right hip joint"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "42385",
 		"Meaning": "Neck of femur"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "42387",
 		"Meaning": "Neck of left femur"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "42386",
 		"Meaning": "Neck of right femur"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "24475",
 		"Meaning": "Left femur"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "24474",
 		"Meaning": "Right femur"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Femurs",
 		"Meaning": "Set of femurs"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "28789",
 		"Meaning": "Fiducial"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Fixation",
 		"Meaning": "Fixation"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "61824",
 		"Meaning": "Frontal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "72970",
 		"Meaning": "Left frontal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "72969",
 		"Meaning": "Right frontal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7202",
 		"Meaning": "Gallbladder"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "45643",
 		"Meaning": "External genitalia"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "25929",
 		"Meaning": "Left glenohumeral joint"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "25927",
 		"Meaning": "Right glenohumeral joint"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "55414",
 		"Meaning": "Glottis"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "GreatVessels",
 		"Meaning": "Great Vessels"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "5973",
 		"Meaning": "Right cardiac lymphatic trunk"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "5972",
 		"Meaning": "Left cardiac lymphatic trunk"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "277064",
 		"Meaning": "Inferior left gastric lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "277652",
 		"Meaning": "Gastro-epiploic lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "66183",
 		"Meaning": "Suprapyloric lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "19949",
 		"Meaning": "Vagina"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "277061",
 		"Meaning": "Superior left gastric lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "17558",
 		"Meaning": "Uterus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "12792",
 		"Meaning": "Celiac lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "66187",
 		"Meaning": "Splenic lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "12799",
 		"Meaning": "Superior pancreatic lymph node"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "LN_12_HDL",
 		"Meaning": "Lymph nodes in hepatoduodenal ligament"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "278174",
 		"Meaning": "Posterior pancreaticoduodenal lymph node group"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "71801",
 		"Meaning": "Superior mesenteric lymph node group"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "71811",
 		"Meaning": "Middle colic lymph node group"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "19667",
 		"Meaning": "Urethra"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "17887",
 		"Meaning": "Right ureter proper"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "17888",
 		"Meaning": "Left ureter proper"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "GTVm",
 		"Meaning": "Gross Tumor Volume Metastasis"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "GTVn",
 		"Meaning": "Nodal Gross Tumor Volume"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "GTVp",
 		"Meaning": "Primary Gross Tumor Volume"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7088",
 		"Meaning": "Heart"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "P1-5B858",
 		"Meaning": "Hepatojejunostomy"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "275020",
 		"Meaning": "Hippocampus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "275024",
 		"Meaning": "Left hippocampus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "275022",
 		"Meaning": "Right hippocampus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "62008",
 		"Meaning": "Hypothalamus"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "5429",
 		"Meaning": "Implantable device"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "10951",
 		"Meaning": "Inferior vena cava"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "229144",
 		"Meaning": "Infraclavicular lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "229148",
 		"Meaning": "Left infraclavicular lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "229146",
 		"Meaning": "Right infraclavicular lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "236337",
 		"Meaning": "Inguinal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "236341",
 		"Meaning": "Left inguinal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "236339",
 		"Meaning": "Right inguinal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224275",
 		"Meaning": "Internal iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224279",
 		"Meaning": "Left internal iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224277",
 		"Meaning": "Right internal iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "235068",
 		"Meaning": "Parasternal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "236745",
 		"Meaning": "Left parasternal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "236743",
 		"Meaning": "Right parasternal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "44312",
 		"Meaning": "Interpectoral lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "275997",
 		"Meaning": "Left interpectoral lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "275995",
 		"Meaning": "Right interpectoral lymph node"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Irrad Volume",
 		"Meaning": "Irradiated Volume"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "ITV",
 		"Meaning": "Internal Target Volume"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7205",
 		"Meaning": "Left kidney"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7204",
 		"Meaning": "Right kidney"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "264815",
 		"Meaning": "Set of kidneys"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "59103",
 		"Meaning": "Left lacrimal gland"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "59102",
 		"Meaning": "Right lacrimal gland"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "55097",
 		"Meaning": "Larynx"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "49017",
 		"Meaning": "Left lateral pterygoid"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "49016",
 		"Meaning": "Right lateral pterygoid"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "3862",
 		"Meaning": "Anterior interventricular branch of left coronary artery"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "NormalTissue",
 		"Meaning": "Undefined Normal Tissue"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "12797",
 		"Meaning": "Left gastric lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "58243",
 		"Meaning": "Left lens"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "58242",
 		"Meaning": "Right lens"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "223846",
 		"Meaning": "Submental lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224001",
 		"Meaning": "Left submandibular lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "223999",
 		"Meaning": "Right submandibular lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "223782",
 		"Meaning": "Submandibular lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "265660",
 		"Meaning": "Left level II lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "265658",
 		"Meaning": "Right level II lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "265656",
 		"Meaning": "Level II lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241953",
 		"Meaning": "Left level III lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241951",
 		"Meaning": "Right level III lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241949",
 		"Meaning": "Level III lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241959",
 		"Meaning": "Left inferior lateral deep cervical lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241957",
 		"Meaning": "Right inferior lateral deep cervical lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241955",
 		"Meaning": "Inferior lateral deep cervical lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241965",
 		"Meaning": "Left level V lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241963",
 		"Meaning": "Right level V lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241961",
 		"Meaning": "Level V lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241971",
 		"Meaning": "Left level VI lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241969",
 		"Meaning": "Right level VI lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "241967",
 		"Meaning": "Level VI lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "59815",
 		"Meaning": "Labial part of mouth"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7197",
 		"Meaning": "Liver"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "265200",
 		"Meaning": "Dome of liver"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7310",
 		"Meaning": "Left lung"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7309",
 		"Meaning": "Right lung"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "68877",
 		"Meaning": "Pair of lungs"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7405",
 		"Meaning": "Main bronchus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7396",
 		"Meaning": "Left main bronchus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7395",
 		"Meaning": "Right main bronchus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "19913",
 		"Meaning": "Left male breast"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "19912",
 		"Meaning": "Right male breast"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "52748",
 		"Meaning": "Mandible"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "48998",
 		"Meaning": "Left masseter"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "48997",
 		"Meaning": "Right masseter"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "44304",
 		"Meaning": "Intermediate deep inguinal lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276021",
 		"Meaning": "Left intermediate deep inguinal lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276019",
 		"Meaning": "Right intermediate deep inguinal lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "49013",
 		"Meaning": "Left medial pterygoid"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "49012",
 		"Meaning": "Right medial pterygoid"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "14192",
 		"Meaning": "Supraclavicular lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "232719",
 		"Meaning": "Left supraclavicular lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "232721",
 		"Meaning": "Right supraclavicular lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9826",
 		"Meaning": "Mediastinum"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "MTV",
 		"Meaning": "Metabolic Tumor Volume"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "56515",
 		"Meaning": "Left middle ear"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "56514",
 		"Meaning": "Right middle ear"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "5965",
 		"Meaning": "Bronchopulmonary lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276828",
 		"Meaning": "Interlobar lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276849",
 		"Meaning": "Lobar lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276855",
 		"Meaning": "Segmental lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276861",
 		"Meaning": "Subsegmental lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276928",
 		"Meaning": "Highest mediastinal lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276933",
 		"Meaning": "Upper paratracheal lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276905",
 		"Meaning": "Station 3 lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "5959",
 		"Meaning": "Superior tracheobronchial lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276813",
 		"Meaning": "Aortopulmonary lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276820",
 		"Meaning": "Para-aortic thoracic lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "5962",
 		"Meaning": "Inferior tracheobronchial lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "12784",
 		"Meaning": "Esophageal lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "276867",
 		"Meaning": "Lymph node of inferior pulmonary ligament"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "54378",
 		"Meaning": "Nasal cavity"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "223695",
 		"Meaning": "Left nipple"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "223693",
 		"Meaning": "Right nipple"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "16656",
 		"Meaning": "Obturator lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "67325",
 		"Meaning": "Occipital lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "72976",
 		"Meaning": "Left occipital lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "72975",
 		"Meaning": "Right occipital lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "62045",
 		"Meaning": "Optic chiasm"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50878",
 		"Meaning": "Left optic nerve"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "50875",
 		"Meaning": "Right optic nerve"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "20292",
 		"Meaning": "Cavity of mouth"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7214",
 		"Meaning": "Left ovary"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7213",
 		"Meaning": "Right ovary"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7198",
 		"Meaning": "Pancreas"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "P1-5C83D",
 		"Meaning": "Pancreaticojejunostomy"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "223899",
 		"Meaning": "Lateral aortic lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "12803",
 		"Meaning": "Paracardial gastric lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "77061",
 		"Meaning": "Parametrium"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "234274",
 		"Meaning": "Pararectal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "61826",
 		"Meaning": "Parietal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "72974",
 		"Meaning": "Left parietal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "72973",
 		"Meaning": "Right parietal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "59798",
 		"Meaning": "Left parotid gland"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "59797",
 		"Meaning": "Right parotid gland"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Parotids",
 		"Meaning": "Set of parotid glands"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "46623",
 		"Meaning": "Inferior pharyngeal constrictor"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "46622",
 		"Meaning": "Middle pharyngeal constrictor"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "46621",
 		"Meaning": "Superior pharyngeal constrictor"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "54966",
 		"Meaning": "Set of constrictor muscles of pharynx"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "16580",
 		"Meaning": "Bony pelvis"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "19614",
 		"Meaning": "Bulb of penis"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9707",
 		"Meaning": "Penis"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9579",
 		"Meaning": "Perineum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "46688",
 		"Meaning": "Pharynx"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "13889",
 		"Meaning": "Pituitary gland"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "66645",
 		"Meaning": "Portal vein"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "54368",
 		"Meaning": "Posterior cranial fossa"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9600",
 		"Meaning": "Prostate"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "28823",
 		"Meaning": "Prosthesis"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "PRV",
 		"Meaning": "Planning Organ-at-Risk Volume"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "PTV_High",
 		"Meaning": "Planning Target Volume High Risk"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Treated Volume",
 		"Meaning": "Treated Volume"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "PTV_Low",
 		"Meaning": "Planning Target Volume Low Risk"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "16950",
 		"Meaning": "Pubic symphysis"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "66326",
 		"Meaning": "Pulmonary artery"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "66643",
 		"Meaning": "Pulmonary vein"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "46900",
 		"Meaning": "Tendon of quadriceps femoris"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "14626",
 		"Meaning": "Wall of rectum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "86682",
 		"Meaning": "Anterior wall of rectum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "14544",
 		"Meaning": "Rectum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "58303",
 		"Meaning": "Left retina"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "58302",
 		"Meaning": "Right retina"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "16694",
 		"Meaning": "Retroperitoneal lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7574",
 		"Meaning": "Rib"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "71331",
 		"Meaning": "Set of ribs"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224498",
 		"Meaning": "Right axillary lymph node group"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Ring",
 		"Meaning": "Ring"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224033",
 		"Meaning": "Left retropharyngeal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224031",
 		"Meaning": "Right retropharyngeal lymphatic chain"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Transp_total",
 		"Meaning": "Transponder Total"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Transp_right",
 		"Meaning": "Transponder Right"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Transp_left",
 		"Meaning": "Transponder Left"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Transp_C",
 		"Meaning": "Transponder C"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Transp_B",
 		"Meaning": "Transponder B"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Transp_apex",
 		"Meaning": "Transponder Apex"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Transp_A",
 		"Meaning": "Transponder A"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Transponder",
 		"Meaning": "Transponder"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7163",
 		"Meaning": "Skin"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "TMV",
 		"Meaning": "Tracking Motion Volume"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9680",
 		"Meaning": "Vertebral canal"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7647",
 		"Meaning": "Spinal cord"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7196",
 		"Meaning": "Spleen"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "14331",
 		"Meaning": "Splenic vein"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "13409",
 		"Meaning": "Left sternocleidomastoid"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7394",
 		"Meaning": "Trachea"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7148",
 		"Meaning": "Stomach"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "54640",
 		"Meaning": "Tongue"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "4725",
 		"Meaning": "Subclavian vein"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "59803",
 		"Meaning": "Left submandibular gland"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "59802",
 		"Meaning": "Right submandibular gland"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Submandibular",
 		"Meaning": "Set of submandibular glands"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "14749",
 		"Meaning": "Superior mesenteric artery"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "14332",
 		"Meaning": "Superior mesenteric vein"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "4720",
 		"Meaning": "Superior vena cava"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "Support",
 		"Meaning": "Support"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "5607",
 		"Meaning": "Surgical clip"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "61825",
 		"Meaning": "Temporal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "72972",
 		"Meaning": "Left temporal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "72971",
 		"Meaning": "Right temporal lobe"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "54834",
 		"Meaning": "Left temporomandibular joint"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "54833",
 		"Meaning": "Right temporomandibular joint"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7212",
 		"Meaning": "Left testis"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "7211",
 		"Meaning": "Right testis"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9603",
 		"Meaning": "Thyroid gland"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "CTV_High",
 		"Meaning": "Clinical Target Volume High Risk"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "CTV_Intermediate",
 		"Meaning": "Target Volume Intermediate Risk"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "CTV_Low",
 		"Meaning": "Clinical Target Volume Low Risk"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224029",
 		"Meaning": "Retropharyngeal lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "16628",
 		"Meaning": "Inferior pancreatic lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "277368",
 		"Meaning": "Anterior pancreaticoduodenal lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "84599",
 		"Meaning": "Lumbar lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "49893",
 		"Meaning": "Coronary artery"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "277259",
 		"Meaning": "Common hepatic lymph node"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224500",
 		"Meaning": "Left axillary lymph node group"
 	},
 	{
-		"Scheme": "RADLEX (3.8)",
+		"Scheme": "RADLEX",
 		"Code": "11582",
 		"Meaning": "Contrast agent"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "67944",
 		"Meaning": "Cerebellum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "20429",
 		"Meaning": "Skin of perineum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "234280",
 		"Meaning": "Sacral lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "3951",
 		"Meaning": "Subclavian artery"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "35289",
 		"Meaning": "Elbow joint"
 	},
 	{
-		"Scheme": "99VMS_STRUCTCODE (1.0)",
+		"Scheme": "99VMS_STRUCTCODE",
 		"Code": "PTV_Intermediate",
 		"Meaning": "Planning Target Volume Intermediate Risk"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "16202",
 		"Meaning": "Sacrum"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "83720",
 		"Meaning": "Lumbar cistern"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9597",
 		"Meaning": "Salivary gland"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "9608",
 		"Meaning": "Bone marrow"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "224271",
 		"Meaning": "Right common iliac lymphatic chain"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "19386",
 		"Meaning": "Seminal vesicle"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "13408",
 		"Meaning": "Right sternocleidomastoid"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "60196",
 		"Meaning": "Right semicircular canal"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "60197",
 		"Meaning": "Left semicircular canal"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "61736",
 		"Meaning": "Left external acoustic tube"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "61735",
 		"Meaning": "Right external acoustic tube"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "5909",
 		"Meaning": "Sacral nerve plexus"
 	},
 	{
-		"Scheme": "FMA (3.2)",
+		"Scheme": "FMA",
 		"Code": "66184",
 		"Meaning": "Subpyloric lymph node"
 	}
