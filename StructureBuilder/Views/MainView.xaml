@@ -44,13 +44,15 @@
             </Button>
             
         </Grid>
-        <ItemsControl ItemsSource="{Binding StructureCreationSteps}" Grid.Row="1">
+        <ScrollViewer Grid.Row="1">
+        <ItemsControl ItemsSource="{Binding StructureCreationSteps}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <local:StructureStepView DataContext="{Binding}"></local:StructureStepView>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+        </ScrollViewer>
         <TextBlock Grid.Row="2" HorizontalAlignment="Center" Foreground="Red" Text="Not Valid for Clinical Use"
                    Visibility="{Binding bValidForClinic, Converter={StaticResource localBoolReverseVisibilityConverter}}"/>
     </Grid>
