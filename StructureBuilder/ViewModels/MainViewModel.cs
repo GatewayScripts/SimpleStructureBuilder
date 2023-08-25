@@ -30,6 +30,14 @@ namespace StructureBuilder.ViewModels
         public DelegateCommand ExportTemplateCommand { get; set; }
         public DelegateCommand AddStepCommand { get; set; }
         public DelegateCommand RunStepsCommand { get; set; }
+        private bool _bStructureDictionary;
+
+        public bool bStructureDictionary
+        {
+            get { return _bStructureDictionary; }
+            set { SetProperty(ref _bStructureDictionary, value); }
+        }
+
         public MainViewModel(Application application, StructureSet structureSet, IEventAggregator eventAggregator)
         {
             _application = application;
@@ -237,6 +245,18 @@ namespace StructureBuilder.ViewModels
 
         private void OnImport()
         {
+            if (bStructureDictionary)
+            {
+                if(ConfigurationManager.AppSettings["StructureDictionaryServer"] == "undefined")
+                {
+                    System.Windows.MessageBox.Show("Structure Dictionary server undefined. See Config file.");
+                }
+                else
+                {
+                    StructureDictionaryService.ServerId = ConfigurationManager.AppSettings["StructureDictionaryServer"];
+                    StructureDictionaryService.InitializeStructureDictionary();
+                }
+            } 
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "JSON (*json)|*.json";
             ofd.Title = "Open Structure Template";
@@ -252,12 +272,46 @@ namespace StructureBuilder.ViewModels
                     var scStep = StructureCreationSteps.Last();
                     scStep.bTemp = scm.bTemp;
                     scStep.ResultStructure = scm.ResultStructure;
-                    scStep.SelectedBaseStructure =
-                       scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
-                        scm.BaseStructure : null;
-                    scStep.SelectedTargetStructure =
-                        scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
-                        scm.TargetStructure : null;
+                    if (scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)))
+                    {
+                        scStep.SelectedBaseStructure = scm.BaseStructure;
+                    }
+                    else if(bStructureDictionary && StructureDictionaryService.StructureDictionary != null)
+                    {
+                        var matches = StructureDictionaryService.GetDictionaryValues(scm.BaseStructure);
+                        foreach(var match in matches)
+                        {
+                            if(scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)))
+                            {
+                                scStep.SelectedBaseStructure = match;
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        scm.BaseStructure = null;
+                    }
+                    if(scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)))
+                    {
+                        scStep.SelectedTargetStructure = scm.TargetStructure;
+                    }
+                    else if (bStructureDictionary && StructureDictionaryService.StructureDictionary != null)
+                    {
+                        var matches = StructureDictionaryService.GetDictionaryValues(scm.TargetStructure);
+                        foreach (var match in matches)
+                        {
+                            if (scStep.Structures.Any(st => st.Equals(scm.TargetStructure, StringComparison.OrdinalIgnoreCase)))
+                            {
+                                scStep.SelectedTargetStructure = match;
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        scm.BaseStructure = null;
+                    }
                     scStep.Margin = scm.Margin;
                     scStep.SelectedOperation = scm.StructureOperation;
                     scStep.AsymmetricMargins = scm.AsymmetricMargin;

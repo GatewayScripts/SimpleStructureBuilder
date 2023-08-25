@@ -124,6 +124,7 @@
     </EmbeddedResource>
     <Compile Include="Models\StructureCodeModel.cs" />
     <Compile Include="Services\StructureCodeService.cs" />
+    <Compile Include="Services\StructureDictionaryService.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
     <Compile Include="ViewModels\AsymmetricMarginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
