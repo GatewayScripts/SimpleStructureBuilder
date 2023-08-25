@@ -281,7 +281,7 @@ namespace StructureBuilder.ViewModels
                         var matches = StructureDictionaryService.GetDictionaryValues(scm.BaseStructure);
                         foreach(var match in matches)
                         {
-                            if(scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)))
+                            if(scStep.Structures.Any(st => st.Equals(match, StringComparison.OrdinalIgnoreCase)))
                             {
                                 scStep.SelectedBaseStructure = match;
                                 break;
@@ -292,7 +292,7 @@ namespace StructureBuilder.ViewModels
                     {
                         scm.BaseStructure = null;
                     }
-                    if(scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)))
+                    if(scStep.Structures.Any(st => st.Equals(scm.TargetStructure, StringComparison.OrdinalIgnoreCase)))
                     {
                         scStep.SelectedTargetStructure = scm.TargetStructure;
                     }
@@ -301,7 +301,7 @@ namespace StructureBuilder.ViewModels
                         var matches = StructureDictionaryService.GetDictionaryValues(scm.TargetStructure);
                         foreach (var match in matches)
                         {
-                            if (scStep.Structures.Any(st => st.Equals(scm.TargetStructure, StringComparison.OrdinalIgnoreCase)))
+                            if (scStep.Structures.Any(st => st.Equals(match, StringComparison.OrdinalIgnoreCase)))
                             {
                                 scStep.SelectedTargetStructure = match;
                                 break;
