@@ -29,7 +29,13 @@ namespace StructureBuilder.ViewModels
         public string SelectedBaseStructure
         {
             get { return _selectedBaseStructure; }
-            set { SetProperty(ref _selectedBaseStructure,value); }
+            set {
+                if (!Structures.Any(st => st.Equals(value)))
+                {
+                    value = Structures.First(st => st.Equals(value, StringComparison.OrdinalIgnoreCase));
+                }
+                SetProperty(ref _selectedBaseStructure,value); 
+            }
         }
 
         private string _selectedTargetStructure;
@@ -37,7 +43,13 @@ namespace StructureBuilder.ViewModels
         public string SelectedTargetStructure
         {
             get { return _selectedTargetStructure; }
-            set { SetProperty(ref _selectedTargetStructure,value); }
+            set {
+                if (!Structures.Any(st => st.Equals(value)))
+                {
+                    value = Structures.First(st=>st.Equals(value,StringComparison.OrdinalIgnoreCase));
+                }
+                SetProperty(ref _selectedTargetStructure,value); 
+            }
         }
         private string _selectedOperation;
 
