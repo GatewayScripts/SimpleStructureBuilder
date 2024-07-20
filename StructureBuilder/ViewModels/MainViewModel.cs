@@ -274,7 +274,7 @@ namespace StructureBuilder.ViewModels
                     scStep.ResultStructure = scm.ResultStructure;
                     if (scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)))
                     {
-                        scStep.SelectedBaseStructure = scm.BaseStructure;
+                        scStep.SelectedBaseStructure = scStep.Structures.First(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase));
                     }
                     else if(bStructureDictionary && StructureDictionaryService.StructureDictionary != null)
                     {
@@ -283,7 +283,7 @@ namespace StructureBuilder.ViewModels
                         {
                             if(scStep.Structures.Any(st => st.Equals(match, StringComparison.OrdinalIgnoreCase)))
                             {
-                                scStep.SelectedBaseStructure = match;
+                                scStep.SelectedBaseStructure = scStep.Structures.First(st => st.Equals(match, StringComparison.OrdinalIgnoreCase));
                                 break;
                             }
                         }
@@ -294,7 +294,7 @@ namespace StructureBuilder.ViewModels
                     }
                     if(scStep.Structures.Any(st => st.Equals(scm.TargetStructure, StringComparison.OrdinalIgnoreCase)))
                     {
-                        scStep.SelectedTargetStructure = scm.TargetStructure;
+                        scStep.SelectedTargetStructure = scStep.Structures.First(st => st.Equals(scm.TargetStructure, StringComparison.OrdinalIgnoreCase));
                     }
                     else if (bStructureDictionary && StructureDictionaryService.StructureDictionary != null)
                     {
@@ -303,7 +303,7 @@ namespace StructureBuilder.ViewModels
                         {
                             if (scStep.Structures.Any(st => st.Equals(match, StringComparison.OrdinalIgnoreCase)))
                             {
-                                scStep.SelectedTargetStructure = match;
+                                scStep.SelectedTargetStructure = scStep.Structures.First(st => st.Equals(match, StringComparison.OrdinalIgnoreCase));
                                 break;
                             }
                         }
