@@ -11,5 +11,15 @@ namespace StructureBuilder.Models
         public string Code { get; set; }
         public string Meaning { get; set; }
         public string Scheme { get; set; }
+        public string Display { get; set; }
+        public StructureCodeModel()
+        {
+            
+        }
+
+        internal void UpdateDisplayMemberPath()
+        {
+            Display = $"{Meaning} ({Code})";
+        }
     }
 }
