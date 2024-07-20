@@ -26,18 +26,22 @@ namespace StructureBuilder.ViewModels
         private IEventAggregator _eventAggregator;
         public bool bValidForClinic { get; set; }
         public ObservableCollection<StructureStepViewModel> StructureCreationSteps { get; set; }
+        private StructureStepViewModel _selectedStructureCreationStep;
+
+        public StructureStepViewModel SelectedStructureCreationStep
+        {
+            get { return _selectedStructureCreationStep; }
+            set { 
+                SetProperty(ref _selectedStructureCreationStep, value);
+                RemoveStepCommand.RaiseCanExecuteChanged();
+            }
+        }
+
         public DelegateCommand ImportTemplateCommand { get; set; }
         public DelegateCommand ExportTemplateCommand { get; set; }
         public DelegateCommand AddStepCommand { get; set; }
         public DelegateCommand RunStepsCommand { get; set; }
-        private bool _bStructureDictionary;
-
-        public bool bStructureDictionary
-        {
-            get { return _bStructureDictionary; }
-            set { SetProperty(ref _bStructureDictionary, value); }
-        }
-
+        public DelegateCommand RemoveStepCommand { get; set; }
         public MainViewModel(Application application, StructureSet structureSet, IEventAggregator eventAggregator)
         {
             _application = application;
@@ -48,8 +52,22 @@ namespace StructureBuilder.ViewModels
             ImportTemplateCommand = new DelegateCommand(OnImport);
             ExportTemplateCommand = new DelegateCommand(OnExport);
             AddStepCommand = new DelegateCommand(OnAddStep);
+            RemoveStepCommand = new DelegateCommand(OnRemoveStep, CanRemoveStep);
             RunStepsCommand = new DelegateCommand(OnRunSteps);
 
+        }
+
+        private bool CanRemoveStep()
+        {
+            return SelectedStructureCreationStep != null;
+        }
+
+        private void OnRemoveStep()
+        {
+            if (SelectedStructureCreationStep != null)
+            {
+                StructureCreationSteps.Remove(SelectedStructureCreationStep);
+            }
         }
 
         private void OnRunSteps()

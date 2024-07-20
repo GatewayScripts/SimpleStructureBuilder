@@ -36,23 +36,26 @@
             <Button Command="{Binding ExportTemplateCommand}" Width="50" Grid.Column="1" ToolTip="Export from Template">
                 <icons:FontAwesome Kind="FileExportSolid"/>
             </Button>
-            <Button Command="{Binding AddStepCommand}" Width="50" Grid.Column="2" ToolTip="Add Structure Creation Step">
-                <icons:FontAwesome Kind="PlusSquareSolid"/>
-            </Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="2">
+                <Button Command="{Binding AddStepCommand}" Width="50" ToolTip="Add Structure Creation Step" Margin="5,0,5,0">
+                    <icons:FontAwesome Kind="PlusSquareSolid"/>
+                </Button>
+                <Button Command="{Binding RemoveStepCommand}" Width="50" ToolTip="Remove Selected Structure Creation Step" Margin="5,0,5,0">
+                    <icons:FontAwesome Kind="MinusSquareSolid"/>
+                </Button>
+            </StackPanel>
             <Button Command="{Binding RunStepsCommand}" Width="50" Grid.Column="3" ToolTip="Run All Structure Creation Steps">
                 <icons:FontAwesome Kind="RunningSolid"/>
             </Button>
-            
+
         </Grid>
-        <ScrollViewer Grid.Row="1">
-        <ItemsControl ItemsSource="{Binding StructureCreationSteps}">
-            <ItemsControl.ItemTemplate>
+        <ListView ItemsSource="{Binding StructureCreationSteps}" SelectedItem="{Binding SelectedStructureCreationStep}" Grid.Row="1">
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <local:StructureStepView DataContext="{Binding}"></local:StructureStepView>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        </ScrollViewer>
         <TextBlock Grid.Row="2" HorizontalAlignment="Center" Foreground="Red" Text="Not Valid for Clinical Use"
                    Visibility="{Binding bValidForClinic, Converter={StaticResource localBoolReverseVisibilityConverter}}"/>
     </Grid>
