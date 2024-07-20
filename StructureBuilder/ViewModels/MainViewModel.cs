@@ -254,10 +254,12 @@ namespace StructureBuilder.ViewModels
                     scStep.ResultStructure = scm.ResultStructure;
                     scStep.SelectedBaseStructure =
                        scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
-                        scm.BaseStructure : null;
+                        scStep.Structures.First(st=>st.Equals(scm.BaseStructure,StringComparison.OrdinalIgnoreCase))
+                        : null;
                     scStep.SelectedTargetStructure =
-                        scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
-                        scm.TargetStructure : null;
+                        scStep.Structures.Any(st => st.Equals(scm.TargetStructure, StringComparison.OrdinalIgnoreCase)) ?
+                        scStep.Structures.First(st=>st.Equals(scm.TargetStructure,StringComparison.OrdinalIgnoreCase))
+                        : null;
                     scStep.Margin = scm.Margin;
                     scStep.SelectedOperation = scm.StructureOperation;
                     scStep.AsymmetricMargins = scm.AsymmetricMargin;
