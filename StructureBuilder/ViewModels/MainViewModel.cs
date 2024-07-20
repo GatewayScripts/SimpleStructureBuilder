@@ -42,6 +42,14 @@ namespace StructureBuilder.ViewModels
         public DelegateCommand AddStepCommand { get; set; }
         public DelegateCommand RunStepsCommand { get; set; }
         public DelegateCommand RemoveStepCommand { get; set; }
+        private bool _bStructureDictionary;
+
+        public bool bStructureDictionary
+        {
+            get { return _bStructureDictionary; }
+            set { SetProperty(ref _bStructureDictionary,value); }
+        }
+
         public MainViewModel(Application application, StructureSet structureSet, IEventAggregator eventAggregator)
         {
             _application = application;
