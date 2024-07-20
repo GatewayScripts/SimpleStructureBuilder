@@ -19,6 +19,7 @@ namespace StructureBuilder.Services
             List<StructureCodeModel> localStructureCodes = JsonConvert.DeserializeObject<List<StructureCodeModel>>(File.ReadAllText(filePath));
             foreach(var code in localStructureCodes.OrderBy(sc=>sc.Meaning))
             {
+                code.UpdateDisplayMemberPath();
                 StructureCodes.Add(code);
             }
         }
