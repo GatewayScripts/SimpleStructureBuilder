@@ -112,7 +112,7 @@ namespace StructureBuilder.ViewModels
 
         private void OnUpdateStructureDetails(StructureCreationModel obj)
         {
-            if(this.StepId == obj.StructureStepId)
+            if(this.StepId == obj.StructureStepId && _structureConfigurationView!=null)
             {
                 this.StructureColor = obj.ResultStructureColor;
                 this.StructureCode = obj.ResultStructureCode;
