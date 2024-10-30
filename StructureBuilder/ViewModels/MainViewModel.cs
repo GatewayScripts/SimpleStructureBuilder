@@ -133,22 +133,27 @@ namespace StructureBuilder.ViewModels
                 }
                 else
                 {
+                    //no overrides exist for method Addstructure in V15.6.
+                    /*
                     if (step.StructureCode != null)
                     {
                         newStructure = _structureSet.AddStructure(new StructureCodeInfo(step.StructureCode.Scheme, step.StructureCode.Code));
                         newStructure.Id = step.ResultStructure;
                     }
                     else
-                    {
+                    {*/
                         newStructure = _structureSet.AddStructure("CONTROL", step.ResultStructure);
-                    }
+                    //}
+                    //cannot set structure color in V15.6
+                    /*
                     if (!String.IsNullOrEmpty(step.StructureColor))
                     {
                         newStructure.Color = (Color)ColorConverter.ConvertFromString(step.StructureColor);
                     }
+                    */
                 }
                 //comment about auto generated structure.
-                newStructure.Comment = $"Auto Generated Structure {Assembly.GetExecutingAssembly().GetName()}";
+                //newStructure.Comment = $"Auto Generated Structure {Assembly.GetExecutingAssembly().GetName()}";
                 //if base structure is high resolution make the new structure high resolution.
                 if (baseStructure.IsHighResolution)
                 {
@@ -248,8 +253,8 @@ namespace StructureBuilder.ViewModels
                 scModel.Margin = step.Margin;
                 scModel.bTemp = step.bTemp;
                 scModel.AsymmetricMargin = step.AsymmetricMargins;
-                scModel.ResultStructureColor = step.StructureColor;
-                scModel.ResultStructureCode = step.StructureCode;
+                //scModel.ResultStructureColor = step.StructureColor;
+                //scModel.ResultStructureCode = step.StructureCode;
                 scmList.Add(scModel);
             }
             SaveFileDialog sfd = new SaveFileDialog();
@@ -289,8 +294,8 @@ namespace StructureBuilder.ViewModels
                     scStep.Margin = scm.Margin;
                     scStep.SelectedOperation = scm.StructureOperation;
                     scStep.AsymmetricMargins = scm.AsymmetricMargin;
-                    scStep.StructureCode = scm.ResultStructureCode;
-                    scStep.StructureColor = scm.ResultStructureColor;
+                    //scStep.StructureCode = scm.ResultStructureCode;
+                    //scStep.StructureColor = scm.ResultStructureColor;
                 }
             }
         }

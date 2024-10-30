@@ -67,20 +67,20 @@ namespace StructureBuilder.ViewModels
             get { return _stepId; }
             set { _stepId = value; }
         }
-        private string _structureColor;
+        //private string _structureColor;
 
-        public string StructureColor
-        {
-            get { return _structureColor; }
-            set { _structureColor = value; }
-        }
-        private StructureCodeModel _structureCode;
+        //public string StructureColor
+        //{
+        //    get { return _structureColor; }
+        //    set { _structureColor = value; }
+        //}
+        //private StructureCodeModel _structureCode;
 
-        public StructureCodeModel StructureCode
-        {
-            get { return _structureCode; }
-            set { _structureCode = value; }
-        }
+        //public StructureCodeModel StructureCode
+        //{
+        //    get { return _structureCode; }
+        //    set { _structureCode = value; }
+        //}
 
 
         public AsymmetricMarginModel AsymmetricMargins { get; set; }
@@ -90,7 +90,7 @@ namespace StructureBuilder.ViewModels
         private StructureSet _structureSet;
         private IEventAggregator _eventAggregator;
         private AsymmetricMarginView _assymetricMarginView;
-        private StructureConfigurationView _structureConfigurationView;
+        //private StructureConfigurationView _structureConfigurationView;
 
         public DelegateCommand SetAsymmetricMarginCommand { get; private set; }
         public DelegateCommand StructureConfigurationCommand { get; set; }
@@ -104,47 +104,47 @@ namespace StructureBuilder.ViewModels
             _structureSet = structureSet;
             _eventAggregator = eventAggregator;
             _eventAggregator.GetEvent<SetAsymmetricMarginEvent>().Subscribe(OnSetAsymmetricMargin);
-            _eventAggregator.GetEvent<UpdateStructureDetailEvent>().Subscribe(OnUpdateStructureDetails);
+            //_eventAggregator.GetEvent<UpdateStructureDetailEvent>().Subscribe(OnUpdateStructureDetails);
             SetAsymmetricMarginCommand = new DelegateCommand(OnSetAsymmetricMargin);
-            StructureConfigurationCommand = new DelegateCommand(OnStructureConfiguration);
+            //StructureConfigurationCommand = new DelegateCommand(OnStructureConfiguration);
             InitializeCollections();
         }
 
-        private void OnUpdateStructureDetails(StructureCreationModel obj)
-        {
-            if(this.StepId == obj.StructureStepId && _structureConfigurationView!=null)
-            {
-                this.StructureColor = obj.ResultStructureColor;
-                this.StructureCode = obj.ResultStructureCode;
-                _structureConfigurationView.Close();
-                _structureConfigurationView = null;
-            }
+        //private void OnUpdateStructureDetails(StructureCreationModel obj)
+        //{
+        //    if(this.StepId == obj.StructureStepId && _structureConfigurationView!=null)
+        //    {
+        //        //this.StructureColor = obj.ResultStructureColor;
+        //        this.StructureCode = obj.ResultStructureCode;
+        //        _structureConfigurationView.Close();
+        //        _structureConfigurationView = null;
+        //    }
             
-        }
+        //}
 
+        //No structure configurations for V15.6. 
+        //private void OnStructureConfiguration()
+        //{
+        //    if (_structureConfigurationView != null)
+        //    {
+        //        _structureConfigurationView = null;
+        //    }
+        //    _structureConfigurationView = new StructureConfigurationView();
+        //    StructureCreationModel localStructureModel = new StructureCreationModel();
+        //    localStructureModel.StructureStepId = this.StepId;
+        //    localStructureModel.ResultStructure = this.ResultStructure;
+        //    localStructureModel.BaseStructure = this.SelectedBaseStructure;
+        //    localStructureModel.StructureOperation = this.SelectedOperation;
+        //    localStructureModel.TargetStructure = this.SelectedTargetStructure;
+        //    localStructureModel.Margin = this.Margin;
+        //    localStructureModel.bTemp = this.bTemp;
+        //    localStructureModel.AsymmetricMargin = this.AsymmetricMargins;
+        //    //localStructureModel.ResultStructureColor = this.StructureColor;
+        //    //localStructureModel.ResultStructureCode = this.StructureCode;
 
-        private void OnStructureConfiguration()
-        {
-            if (_structureConfigurationView != null)
-            {
-                _structureConfigurationView = null;
-            }
-            _structureConfigurationView = new StructureConfigurationView();
-            StructureCreationModel localStructureModel = new StructureCreationModel();
-            localStructureModel.StructureStepId = this.StepId;
-            localStructureModel.ResultStructure = this.ResultStructure;
-            localStructureModel.BaseStructure = this.SelectedBaseStructure;
-            localStructureModel.StructureOperation = this.SelectedOperation;
-            localStructureModel.TargetStructure = this.SelectedTargetStructure;
-            localStructureModel.Margin = this.Margin;
-            localStructureModel.bTemp = this.bTemp;
-            localStructureModel.AsymmetricMargin = this.AsymmetricMargins;
-            localStructureModel.ResultStructureColor = this.StructureColor;
-            localStructureModel.ResultStructureCode = this.StructureCode;
-
-            _structureConfigurationView.DataContext = new StructureConfigurationViewModel(localStructureModel, _eventAggregator);
-            _structureConfigurationView.ShowDialog();
-        }
+        //    _structureConfigurationView.DataContext = new StructureConfigurationViewModel(localStructureModel, _eventAggregator);
+        //    _structureConfigurationView.ShowDialog();
+        //}
 
         private void OnSetAsymmetricMargin(AsymmetricMarginViewModel obj)
         {
