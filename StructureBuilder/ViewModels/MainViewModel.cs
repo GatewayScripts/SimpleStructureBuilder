@@ -185,6 +185,7 @@ namespace StructureBuilder.ViewModels
                     {
                         newStructure.ConvertToHighResolution();
                     }
+                    //Convert target to high resolution if it is not BODY
                     if (newStructure.IsHighResolution && !targetStructure.IsHighResolution && targetStructure.DicomType != "EXTERNAL")
                     {
                         targetStructure.ConvertToHighResolution();

@@ -29,7 +29,7 @@
             <TextBox Text="{Binding ResultStructure}" Margin="2"/>
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <TextBlock Text="BaseStructure" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Base Structure" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
             <ComboBox ItemsSource="{Binding Structures}" SelectedItem="{Binding SelectedBaseStructure}" Margin="2"/>
         </StackPanel>
         <StackPanel Grid.Column="2">
