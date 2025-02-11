@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Converters\AsymmetricMarginVisibilityConverter.cs" />
     <Compile Include="Converters\BoolReverseVisibilityConverter.cs" />
+    <Compile Include="Converters\BoolVisibilityConverter.cs" />
     <Compile Include="Converters\MarginVisibilityConverter.cs" />
     <Compile Include="Converters\StringColorConverter.cs" />
     <Compile Include="Converters\TargetStructureVisibilityConverter.cs" />
@@ -123,6 +124,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Compile Include="Models\StructureCodeModel.cs" />
+    <Compile Include="Models\StructureModel.cs" />
     <Compile Include="Services\StructureCodeService.cs" />
     <Compile Include="Startup\Bootstrapper.cs" />
     <Compile Include="ViewModels\AsymmetricMarginViewModel.cs" />

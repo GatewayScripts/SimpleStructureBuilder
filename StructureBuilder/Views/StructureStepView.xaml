@@ -13,6 +13,7 @@
             <converters:MarginVisibilityConverter x:Key="localMarginVisibiltyConverter"/>
             <converters:TargetStructureVisibilityConverter x:Key="localTargetVisiblityConverter"/>
             <converters:AsymmetricMarginVisibilityConverter x:Key="localAsymmetricMarginVisibilityConverter"/>
+            <converters:BoolVisibilityConverter x:Key="localBoolVisibilityConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -30,17 +31,23 @@
         </StackPanel>
         <StackPanel Grid.Column="1">
             <TextBlock Text="Base Structure" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
-            <ComboBox ItemsSource="{Binding Structures}" SelectedItem="{Binding SelectedBaseStructure}" Margin="2"/>
+            <ComboBox ItemsSource="{Binding Structures}" SelectedItem="{Binding SelectedBaseStructure}" Margin="2"
+                      DisplayMemberPath="StructureId"/>
+            <TextBlock Text="Hi" Foreground="Green" Margin="5,2,2,2" FontWeight="Bold"
+                       Visibility="{Binding SelectedBaseStructure, Converter={StaticResource localBoolVisibilityConverter}}"/>
         </StackPanel>
         <StackPanel Grid.Column="2">
             <TextBlock Text="Operation" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
             <ComboBox ItemsSource="{Binding Operations}" SelectedItem="{Binding SelectedOperation}" Margin="2"/>
         </StackPanel>
         <StackPanel Grid.Column="3">
-            <TextBlock Text="Target Structure" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"
-                       Visibility="{Binding SelectedOperation, Converter={StaticResource localTargetVisiblityConverter}}"/>
+            <StackPanel Visibility="{Binding SelectedOperation, Converter={StaticResource localTargetVisiblityConverter}}">
+            <TextBlock Text="Target Structure" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"/>
             <ComboBox ItemsSource="{Binding Structures}" SelectedItem="{Binding SelectedTargetStructure}" Margin="2"
-                      Visibility="{Binding SelectedOperation, Converter={StaticResource localTargetVisiblityConverter}}"/>
+                      DisplayMemberPath="StructureId"/>
+                <TextBlock Text="Hi" Foreground="Green" FontWeight="Bold"
+                           Visibility="{Binding SelectedTargetStructure, Converter={StaticResource localBoolVisibilityConverter}}"/>
+            </StackPanel>
             <TextBlock Text="Margin [mm]" Margin="2" HorizontalAlignment="Center" FontWeight="Bold"
                        Visibility="{Binding SelectedOperation, Converter={StaticResource localMarginVisibiltyConverter}}"/>
             <TextBox Text="{Binding Margin}" Margin="2"

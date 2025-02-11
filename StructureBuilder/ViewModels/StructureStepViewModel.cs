@@ -24,17 +24,17 @@ namespace StructureBuilder.ViewModels
             get { return _resultStructure; }
             set { SetProperty(ref _resultStructure,value); }
         }
-        private string _selectedBaseStructure;
+        private StructureModel _selectedBaseStructure;
 
-        public string SelectedBaseStructure
+        public StructureModel SelectedBaseStructure
         {
             get { return _selectedBaseStructure; }
             set { SetProperty(ref _selectedBaseStructure,value); }
         }
 
-        private string _selectedTargetStructure;
+        private StructureModel _selectedTargetStructure;
 
-        public string SelectedTargetStructure
+        public StructureModel SelectedTargetStructure
         {
             get { return _selectedTargetStructure; }
             set { SetProperty(ref _selectedTargetStructure,value); }
@@ -84,7 +84,7 @@ namespace StructureBuilder.ViewModels
 
 
         public AsymmetricMarginModel AsymmetricMargins { get; set; }
-        public ObservableCollection<string> Structures { get; set; }
+        public ObservableCollection<StructureModel> Structures { get; set; }
         public ObservableCollection<string> Operations { get; set; }
 
         private StructureSet _structureSet;
@@ -96,7 +96,7 @@ namespace StructureBuilder.ViewModels
         public DelegateCommand StructureConfigurationCommand { get; set; }
         public StructureStepViewModel(StructureSet structureSet, int stepId, IEventAggregator eventAggregator)
         {
-            Structures = new ObservableCollection<string>();
+            Structures = new ObservableCollection<StructureModel>();
             Operations = new ObservableCollection<string>();
             StepId = stepId;
             //set initial asymmetric margin model so it is not null. 
@@ -173,13 +173,15 @@ namespace StructureBuilder.ViewModels
         {
             foreach(var structure in _structureSet.Structures.OrderByDescending(st=>st.DicomType.Contains("TV")).ThenBy(st=>st.Id))
             {
-                Structures.Add(structure.Id);
+                Structures.Add(new StructureModel(structure));
             }
             Operations.Add("Margin");
             Operations.Add("Asymmetric Margin");
             Operations.Add("And");
             Operations.Add("Or");
             Operations.Add("Sub");
+            Operations.Add("HiRes");
+            Operations.Add("LoRes");
         }
     }
 }

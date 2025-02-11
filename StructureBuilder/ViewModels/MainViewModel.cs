@@ -11,6 +11,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
@@ -99,12 +100,12 @@ namespace StructureBuilder.ViewModels
 
             foreach (var step in StructureCreationSteps)
             {
-                if (String.IsNullOrEmpty(step.SelectedBaseStructure))
+                if (step.SelectedBaseStructure?.StructureId == null)
                 {
                     //emptyBaseStructures.Add(step.SelectedBaseStructure);
                     valid = false;
                 }
-                if (String.IsNullOrEmpty(step.SelectedTargetStructure) && !step.SelectedOperation.Contains("Margin"))
+                if (step.SelectedTargetStructure?.StructureId == null && !(step.SelectedOperation.Contains("Margin")|| step.SelectedOperation.Contains("Res")))
                 {
                     //emptyTargetStructures.Add(step.SelectedTargetStructure);
                     valid = false;
@@ -120,7 +121,7 @@ namespace StructureBuilder.ViewModels
             //build structure with ESAPI
             foreach (var step in StructureCreationSteps)
             {
-                var baseStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedBaseStructure));
+                var baseStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedBaseStructure.StructureId));
 
                 Structure newStructure = null;
                 //first check if structure exists, if so modify, if no, create.
@@ -150,9 +151,16 @@ namespace StructureBuilder.ViewModels
                 //comment about auto generated structure.
                 newStructure.Comment = $"Auto Generated Structure {Assembly.GetExecutingAssembly().GetName()}";
                 //if base structure is high resolution make the new structure high resolution.
-                if (baseStructure.IsHighResolution)
+                if (baseStructure.IsHighResolution && !step.SelectedOperation.Contains("LoRes"))
                 {
-                    newStructure.ConvertToHighResolution();
+                    if (newStructure.CanConvertToHighResolution())
+                    {
+                        newStructure.ConvertToHighResolution();
+                    }
+                    else
+                    {
+                        System.Windows.MessageBox.Show($"Cannot convert {newStructure.Id} to high resolution segment");
+                    }
                 }
                 if (step.SelectedOperation == "Margin")
                 {
@@ -171,20 +179,58 @@ namespace StructureBuilder.ViewModels
                             step.AsymmetricMargins.Post,
                             step.AsymmetricMargins.Sup));
                 }
+                else if(step.SelectedOperation == "HiRes")
+                {
+                    //if base structure is already hi res, then make hi res and copy.
+                    if (baseStructure.IsHighResolution)
+                    {
+                        newStructure.ConvertToHighResolution();
+                        newStructure.SegmentVolume = baseStructure.SegmentVolume;
+                    }
+                    else
+                    {
+                        //if base structure is not hi res, copy then make hi res.
+                        newStructure.SegmentVolume = baseStructure.SegmentVolume;
+                        newStructure.ConvertToHighResolution();
+                    }
+                }
+                else if(step.SelectedOperation == "LoRes")
+                {
+                    if (baseStructure.IsHighResolution)
+                    {
+                        //loop through contours and copy contours to new image.
+                        for(int slice = 0; slice < _structureSet.Image.ZSize; slice++)
+                        {
+                            var baseContours = baseStructure.GetContoursOnImagePlane(slice);
+                            if (baseContours.Any())
+                            {
+                                foreach(var contour in baseContours)
+                                {
+                                    newStructure.AddContourOnImagePlane(contour, slice);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        //if structure is already low resolution, simply copy.
+                        newStructure.SegmentVolume = baseStructure.SegmentVolume;
+                    }
+                }
                 else
                 {
-                    var targetStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedTargetStructure));
+                    var targetStructure = _structureSet.Structures.First(s => s.Id.Equals(step.SelectedTargetStructure.StructureId));
                     //check that target structure and base structure are the same resolution.
                     if ((targetStructure.IsHighResolution && !baseStructure.IsHighResolution) || (!targetStructure.IsHighResolution && baseStructure.IsHighResolution))
                     {
-                        System.Windows.MessageBox.Show($"Base Structure ({baseStructure.Id} - {(baseStructure.IsHighResolution ? "High Res" : "Standard Res")}) and Target Structure ({targetStructure.Id} - {(targetStructure.IsHighResolution ? "High Res" : "Standard Res")}) are not the same resolution.\nPlease close the app and update the structures.");
+                        System.Windows.MessageBox.Show($"Base Structure ({baseStructure.Id} - {(baseStructure.IsHighResolution ? "High Res" : "Standard Res")}) and Target Structure ({targetStructure.Id} - {(targetStructure.IsHighResolution ? "High Res" : "Standard Res")}) are not the same resolution.\nPlease use the HiRes and LoRes Conversions.");
                         return;
                     }
                     //Other steps require the operation and a target structure.
-                    if (targetStructure.IsHighResolution && !newStructure.IsHighResolution)
-                    {
-                        newStructure.ConvertToHighResolution();
-                    }
+                    //if (targetStructure.IsHighResolution && !newStructure.IsHighResolution)
+                    //{
+                    //    newStructure.ConvertToHighResolution();
+                    //}
                     //Convert target to high resolution if it is not BODY
                     if (newStructure.IsHighResolution && !targetStructure.IsHighResolution && targetStructure.DicomType != "EXTERNAL")
                     {
@@ -221,31 +267,41 @@ namespace StructureBuilder.ViewModels
 
         private void OnAddStep()
         {
-            List<string> priorSteps = StructureCreationSteps.Select(scs => scs.ResultStructure).ToList();
+            List<StructureModel> priorSteps = new List<StructureModel>();
+            foreach(var step in StructureCreationSteps)
+            {
+                StructureModel structureModel = new StructureModel();
+                structureModel.StructureId = step.ResultStructure;
+                if ((step.SelectedBaseStructure.bHiRes || step.SelectedOperation == "HiRes") && step.SelectedOperation != "LoRes")
+                {
+                    structureModel.bHiRes = true;
+                }
+                priorSteps.Add(structureModel);
+            }
             var creationStep = new StructureStepViewModel(_structureSet, StructureCreationSteps.Count(), _eventAggregator);
             if (priorSteps.Any())
             {
                 //add all structures to the structures collections. 
                 foreach (var step in priorSteps)
                 {
+
                     creationStep.Structures.Add(step);
                 }
-
             }
             StructureCreationSteps.Add(creationStep);
         }
 
         private void OnExport()
         {
-            List<StructureCreationModel> scmList = new List<StructureCreationModel>();
+            List<StructureCreationModelTransfer> scmList = new List<StructureCreationModelTransfer>();
             foreach (var step in StructureCreationSteps)
             {
-                StructureCreationModel scModel = new StructureCreationModel();
+                StructureCreationModelTransfer scModel = new StructureCreationModelTransfer();
                 scModel.StructureStepId = step.StepId;
                 scModel.ResultStructure = step.ResultStructure;
-                scModel.BaseStructure = step.SelectedBaseStructure;
+                scModel.BaseStructure = step.SelectedBaseStructure?.StructureId;
                 scModel.StructureOperation = step.SelectedOperation;
-                scModel.TargetStructure = step.SelectedTargetStructure;
+                scModel.TargetStructure = step.SelectedTargetStructure?.StructureId;
                 scModel.Margin = step.Margin;
                 scModel.bTemp = step.bTemp;
                 scModel.AsymmetricMargin = step.AsymmetricMargins;
@@ -272,7 +328,9 @@ namespace StructureBuilder.ViewModels
                 StructureCreationSteps.Clear();
                 //get list from template
                 //TODO error checking onJson conversion.
-                List<StructureCreationModel> scmList = JsonConvert.DeserializeObject<List<StructureCreationModel>>(File.ReadAllText(ofd.FileName));
+                List<StructureCreationModelTransfer> scmList = 
+                    JsonConvert.DeserializeObject<List<StructureCreationModelTransfer>>(File.ReadAllText(ofd.FileName));
+
                 foreach (var scm in scmList)
                 {
                     OnAddStep();//add the step manually, then fill the data from JSON. 
@@ -280,12 +338,12 @@ namespace StructureBuilder.ViewModels
                     scStep.bTemp = scm.bTemp;
                     scStep.ResultStructure = scm.ResultStructure;
                     scStep.SelectedBaseStructure =
-                       scStep.Structures.Any(st => st.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
-                        scStep.Structures.First(st=>st.Equals(scm.BaseStructure,StringComparison.OrdinalIgnoreCase))
+                       scStep.Structures.Any(st => st.StructureId.Equals(scm.BaseStructure, StringComparison.OrdinalIgnoreCase)) ?
+                        scStep.Structures.First(st => st.StructureId.Equals(scm.BaseStructure,StringComparison.OrdinalIgnoreCase))
                         : null;
                     scStep.SelectedTargetStructure =
-                        scStep.Structures.Any(st => st.Equals(scm.TargetStructure, StringComparison.OrdinalIgnoreCase)) ?
-                        scStep.Structures.First(st=>st.Equals(scm.TargetStructure,StringComparison.OrdinalIgnoreCase))
+                        scStep.Structures.Any(st => st.StructureId.Equals(scm.TargetStructure, StringComparison.OrdinalIgnoreCase)) ?
+                        scStep.Structures.First(st=>st.StructureId.Equals(scm.TargetStructure,StringComparison.OrdinalIgnoreCase))
                         : null;
                     scStep.Margin = scm.Margin;
                     scStep.SelectedOperation = scm.StructureOperation;
